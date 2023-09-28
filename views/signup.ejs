@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+        body {
+            background-color: #F9F9F9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #FF5733, #FFC300);
+            text-align: center;
+        }
+
+        .login-form {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .login-form div {
+            margin: 10px 0;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .login-form button[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .login-form button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="div login-form">
+            <h2>Signup</h2>
+            <form action="/signupsubmit" method="POST">
+                <div>
+                    <input type="text" name="user_name" placeholder="User name">
+                </div>
+                <div>
+                    <input type="text" name="email" placeholder="Email Id">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

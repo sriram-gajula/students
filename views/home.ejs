@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+<style>
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color and text color for the body */
+body {
+  background-color: #f7f7f7;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
+}
+
+/* Style the container for login and signup forms */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style card elements for login and signup */
+.card {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels and inputs */
+.form-label {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style buttons */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Style the header text */
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Top section styles */
+.div_top {
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFF6FF;
+}
+
+.top_div {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.top_logo {
+  width: 10vw;
+  height: 7vh;
+  background-image: url("your-logo-image-url.jpg");
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.top_heading {
+  width: 75vw;
+  height: 7vh;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.top_navbar {
+  width: 10vw;
+  height: 7vh;
+  background-image: url("your-navbar-image-url.jpg");
+  background-size: cover;
+}
+
+/* Box section styles */
+.box_container {
+  height: 50vh;
+  width: 100vw;
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box_item {
+  height: 150px;
+  width: 150px;
+  margin: 3vh;
+  background-color: #ffa500; /* Orange background color */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.box_item:hover {
+  transform: scale(1.1); /* Hover effect to slightly enlarge the box */
+}
+
+/* Text heading styles */
+.text_heading {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.height {
+    height: 20vh;
+}
+
+.width {
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.box_item_img_1 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/download__7_-removebg-preview.png?v=1683575292254");
+    background-size: cover;
+}
+
+.box_item_img_2 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/download__6_-removebg-preview.png?v=1683575280434");
+    background-size: cover;
+
+}
+
+.box_item_img_3 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/attendence-removebg-preview%20(1).png?v=1683575249011");
+    background-size: cover;
+
+}
+
+.box_item_img_4 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/download__4_-removebg-preview.png?v=1683575256772");
+    background-size: cover;
+}
+
+.box_item_img_5 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/download__5_-removebg-preview.png?v=1683575267183");
+    background-size: cover;
+}
+
+.box_item_img_6 {
+    background-image: url("https://cdn.glitch.global/b6cf699d-8aac-46b2-b715-929c136f8320/images__5_-removebg-preview.png?v=1683575215177");
+    background-size: cover;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="div_top">
+        <div class="top_div d-flex">
+            <div class="top_logo logo_img"></div>
+            <div class="top_heading heading">STUDENTS WEBSITE</div>
+            <div class="top_navbar logo_mech"></div>
+        </div>
+        
+        <div class="d-flex flex-row">
+            <div class="box_container">
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <a href="/project">
+                            <div class=" box_item box_item_img_1 text-center">
+
+                            </div>
+                            <btn>
+                                <div class="text_heading text-center">Projects</div>
+                            </btn>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/video">
+
+                            <div class="box_item box_item_img_2 text-center">
+
+                            </div>
+                            <btn >
+                                <div class="text_heading text-center">Leactures</div>
+                            </btn>
+                        </a>
+
+                    </div>
+
+
+                    <div>
+                        <a href="/home/contest">
+                          <div class="box_item text-center box_item_img_5"></div>
+                          <btn>
+                            <div class="text_heading text-center">Blogs</div>
+                          </btn>
+                        </a>
+                      </div>
+
+                </div>
+
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <a href="https://vishnu.edu.in/results.php">
+                            <div class="box_item text-center box_item_img_4">
+
+                            </div>
+                            <btn>
+                                <div class="text_heading text-center">Results</div>
+                            </btn>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://vishnu.ac.in/Default.aspx?ReturnUrl=%2f">
+
+                            <div class="box_item text-center box_item_img_3">
+
+                            </div>
+                            <btn>
+                                <div class="text_heading text-center">Attendence</div>
+                            </btn>
+                        </a>
+                    </div>
+                      
+
+                    <div>
+                        <a href="/feedback">
+                            <div class="box_item text-center box_item_img_6">
+
+
+                            </div>
+
+
+                            <btn>
+                                <div class="text_heading text-center">Faculty Feedback</div>
+                            </btn>
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

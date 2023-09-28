@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Projects</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff6600, #ff8c00);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff8c00;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Projects</h1>
+    <div class="container">
+        <form action="/project" method="POST" enctype="multipart/form-data">
+            <!-- ... (previous form fields) -->
+
+            <label for="image">Image (JPEG or PNG):</label>
+            <input type="file" id="image" name="image" accept="image/jpeg, image/png" required>
+
+            <label for="video">Video (MP4):</label>
+            <input type="file" id="video" name="video" accept="video/mp4" required>
+
+            <input type="submit" value="Submit Project">
+        </form>
+    </div>
+</body>
+
+</html>

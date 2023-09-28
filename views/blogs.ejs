@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Blogs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #3498db, #c0392b); /* Gradient background */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Text color */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the container */
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul.list-unstyled {
+            padding-left: 0;
+        }
+
+        li.media {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to each item */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        img.blog-image {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .btn-back {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">View Blogs</h1>
+        <ul class="list-unstyled mt-4">
+            <% blogs.forEach((blog) => { %>
+            <li class="media mb-4">
+                <!-- Display the image if available -->
+                <% if (blog.Image && blog.Image instanceof Buffer) { %>
+                <img src="data:image/jpeg;base64,<%= blog.Image.toString('base64') %>" alt="Blog Image"
+                    class="mr-3 blog-image">
+                <% } %>
+                <div class="media-body">
+                    <h2 class="mt-0"><%= blog.Title %></h2>
+                    <p><%= blog.Content %></p>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+        <a href="home.ejs" class="btn btn-primary btn-back">Back to Home</a>
+    </div>
+</body>
+
+</html>
